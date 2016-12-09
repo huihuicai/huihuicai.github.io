@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.huihuicai.win">
-  <title>技术人生 | 辉辉菜博客</title>
+  <title>java中常见的数据结构 | 辉辉菜博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学无止境现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。">
+  <meta name="description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,SetMap:HashMap,HashTable从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。2、详细的分析：List的特点：元素是有序的放入，其中的元素是可以重复的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="技术人生">
+<meta property="og:title" content="java中常见的数据结构">
 <meta property="og:url" content="http://www.huihuicai.win/2016/12/05/skill/firstSkill/index.html">
 <meta property="og:site_name" content="辉辉菜博客">
-<meta property="og:description" content="学无止境现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。">
-<meta property="og:updated_time" content="2016-12-09T13:33:50.000Z">
+<meta property="og:description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,SetMap:HashMap,HashTable从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。2、详细的分析：List的特点：元素是有序的放入，其中的元素是可以重复的">
+<meta property="og:updated_time" content="2016-12-09T15:12:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术人生">
-<meta name="twitter:description" content="学无止境现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。">
+<meta name="twitter:title" content="java中常见的数据结构">
+<meta name="twitter:description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,SetMap:HashMap,HashTable从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。2、详细的分析：List的特点：元素是有序的放入，其中的元素是可以重复的">
   
     <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
   
@@ -55,9 +55,9 @@
 			
 				<li><a href="/">首页</a></li>
 	        
-				<li><a href="/categories">技术</a></li>
+				<li><a href="/categories/skill">技术</a></li>
 	        
-				<li><a href="/tags">随笔</a></li>
+				<li><a href="/categories/essay">随笔</a></li>
 	        
 				<li><a href="/archives">全部</a></li>
 	        
@@ -123,9 +123,9 @@
 				
 					<li><a href="/">首页</a></li>
 		        
-					<li><a href="/categories">技术</a></li>
+					<li><a href="/categories/skill">技术</a></li>
 		        
-					<li><a href="/tags">随笔</a></li>
+					<li><a href="/categories/essay">随笔</a></li>
 		        
 					<li><a href="/archives">全部</a></li>
 		        
@@ -164,7 +164,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      技术人生
+      java中常见的数据结构
     </h1>
   
 
@@ -175,7 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="学无止境"><a href="#学无止境" class="headerlink" title="学无止境"></a>学无止境</h2><h4 id="现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。"><a href="#现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。" class="headerlink" title="现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。"></a>现在的技术真是日新月异，没等自己停下来反思一下，技术的潮流就已经到了浪头，跟着走就需要付出绝对的精力，不跟着走，就会一步步落在了后面。作为程序猿，必须要咬牙坚持住，坚持每天读别人的博客，坚持了解新的技术，新的领域。</h4>
+        <h3 id="一、List-Map-Set之间的关系"><a href="#一、List-Map-Set之间的关系" class="headerlink" title="一、List,Map,Set之间的关系"></a>一、List,Map,Set之间的关系</h3><h5 id="1、首先需要了解这三者的集成关系："><a href="#1、首先需要了解这三者的集成关系：" class="headerlink" title="1、首先需要了解这三者的集成关系："></a>1、首先需要了解这三者的集成关系：</h5><h5 id="Collection-List-Set"><a href="#Collection-List-Set" class="headerlink" title="Collection:List,Set"></a>Collection:<strong>List</strong>,<strong>Set</strong></h5><h5 id="Map-HashMap-HashTable"><a href="#Map-HashMap-HashTable" class="headerlink" title="Map:HashMap,HashTable"></a><strong>Map</strong>:HashMap,<strong>HashTable</strong></h5><h5 id="从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是-以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。"><a href="#从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是-以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。" class="headerlink" title="从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。"></a>从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。</h5><h5 id="2、详细的分析："><a href="#2、详细的分析：" class="headerlink" title="2、详细的分析："></a>2、详细的分析：</h5><h5 id="List的特点：元素是有序的放入，其中的元素是可以重复的；"><a href="#List的特点：元素是有序的放入，其中的元素是可以重复的；" class="headerlink" title="List的特点：元素是有序的放入，其中的元素是可以重复的；"></a>List的特点：元素是有序的放入，其中的元素是可以重复的；</h5><h5 id="Map的特点：元素是按照key-value的形式放入的，没有放入的顺序；"><a href="#Map的特点：元素是按照key-value的形式放入的，没有放入的顺序；" class="headerlink" title="Map的特点：元素是按照key-value的形式放入的，没有放入的顺序；"></a>Map的特点：元素是按照key-value的形式放入的，没有放入的顺序；</h5><h5 id="Set的特点：元素是无序放入的，元素不可重复。虽然是无序放入，但是该元素在set中位置是由hashcode决定的，位置是固定的。"><a href="#Set的特点：元素是无序放入的，元素不可重复。虽然是无序放入，但是该元素在set中位置是由hashcode决定的，位置是固定的。" class="headerlink" title="Set的特点：元素是无序放入的，元素不可重复。虽然是无序放入，但是该元素在set中位置是由hashcode决定的，位置是固定的。"></a>Set的特点：元素是无序放入的，元素不可重复。虽然是无序放入，但是该元素在set中位置是由hashcode决定的，位置是固定的。</h5><h5 id="List有三个实现类：LinkedList、ArrayList、Vector"><a href="#List有三个实现类：LinkedList、ArrayList、Vector" class="headerlink" title="List有三个实现类：LinkedList、ArrayList、Vector"></a>List有三个实现类：LinkedList、ArrayList、Vector</h5><h5 id="Set有三个实现类：HashMap、HashTable、LinkedHashMap。"><a href="#Set有三个实现类：HashMap、HashTable、LinkedHashMap。" class="headerlink" title="Set有三个实现类：HashMap、HashTable、LinkedHashMap。"></a>Set有三个实现类：HashMap、HashTable、LinkedHashMap。</h5><h5 id="（1）LinkedList、ArrayList、Vector："><a href="#（1）LinkedList、ArrayList、Vector：" class="headerlink" title="（1）LinkedList、ArrayList、Vector："></a>（1）LinkedList、ArrayList、Vector：</h5><h5 id="LinkedList：底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢。"><a href="#LinkedList：底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢。" class="headerlink" title="LinkedList：底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢。"></a>LinkedList：底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢。</h5><h5 id="ArrayList和Vector的区别：ArrayList是非线程安全的，效率高；Vector是基于线程安全的，效率低-。"><a href="#ArrayList和Vector的区别：ArrayList是非线程安全的，效率高；Vector是基于线程安全的，效率低-。" class="headerlink" title="ArrayList和Vector的区别：ArrayList是非线程安全的，效率高；Vector是基于线程安全的，效率低 。"></a>ArrayList和Vector的区别：ArrayList是非线程安全的，效率高；Vector是基于线程安全的，效率低 。</h5><h5 id="（2）LinkedList、ArrayList、Vector："><a href="#（2）LinkedList、ArrayList、Vector：" class="headerlink" title="（2）LinkedList、ArrayList、Vector："></a>（2）LinkedList、ArrayList、Vector：</h5><h5 id="HashMap非线程安全，高效，支持null；HashTable线程安全，低效，不支持null。"><a href="#HashMap非线程安全，高效，支持null；HashTable线程安全，低效，不支持null。" class="headerlink" title="HashMap非线程安全，高效，支持null；HashTable线程安全，低效，不支持null。"></a>HashMap非线程安全，高效，支持null；HashTable线程安全，低效，不支持null。</h5><pre><code>[详情]([http://blog.csdn.net/speedme/article/details/22398395](http://blog.csdn.net/speedme/article/details/22398395))
+</code></pre>
       
 
       
@@ -369,11 +370,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" v-on:click="choseTag($event)" class="color3" style="font-size: 12px;">技术</a>
+                <a href="javascript:void(0)" v-on:click="choseTag($event)" class="color3" style="font-size: 12px;">青春</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" v-on:click="choseTag($event)" class="color3" style="font-size: 12px;">青春</a>
+                <a href="javascript:void(0)" v-on:click="choseTag($event)" class="color3" style="font-size: 12px;">技术</a>
               </li>
             
             <div class="clearfix"></div>
