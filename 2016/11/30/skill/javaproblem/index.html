@@ -6,63 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.huihuicai.win">
-  <title>乱七八糟 | 辉辉菜博客</title>
+  <title>java中常见的数据结构 | 辉辉菜博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谁的青春没有错？迟到学堂打手掌 你抿嘴偷笑
-暮风古榕捉迷藏 你总找我不到
-贴近水面看倒影 谁料这清明雨落
-两张荷叶穿插在沉默的人潮
-目 别你远离花轿
-谁 扮鬼脸逗你笑
-你 将和谁一梳齐眉老
-酒 买醉在万枫桥
-画 握笔也下不了
-许许梦回只得寂寥
-将血化墨 我画烟波 相随着
-这卷画 只留淡淡余热
-声声海誓 早被海潮吞没
-剩下一笔画未 苦笑砚无墨
-我欲成画未成画 你前生一笑
-却不敢言不能叹 凭栏夜雨飘摇">
+  <meta name="description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,Set
+Map:HashMap,HashTable
+从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="乱七八糟">
-<meta property="og:url" content="http://www.huihuicai.win/2016/12/05/main/firstMain/index.html">
+<meta property="og:title" content="java中常见的数据结构">
+<meta property="og:url" content="http://www.huihuicai.win/2016/11/30/skill/javaproblem/index.html">
 <meta property="og:site_name" content="辉辉菜博客">
-<meta property="og:description" content="谁的青春没有错？迟到学堂打手掌 你抿嘴偷笑
-暮风古榕捉迷藏 你总找我不到
-贴近水面看倒影 谁料这清明雨落
-两张荷叶穿插在沉默的人潮
-目 别你远离花轿
-谁 扮鬼脸逗你笑
-你 将和谁一梳齐眉老
-酒 买醉在万枫桥
-画 握笔也下不了
-许许梦回只得寂寥
-将血化墨 我画烟波 相随着
-这卷画 只留淡淡余热
-声声海誓 早被海潮吞没
-剩下一笔画未 苦笑砚无墨
-我欲成画未成画 你前生一笑
-却不敢言不能叹 凭栏夜雨飘摇">
-<meta property="og:updated_time" content="2016-12-09T15:03:26.000Z">
+<meta property="og:description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,Set
+Map:HashMap,HashTable
+从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。">
+<meta property="og:image" content="http://www.huihuicai.win/Users/wh/Downloads/20150820130200565.png">
+<meta property="og:updated_time" content="2016-12-13T16:04:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乱七八糟">
-<meta name="twitter:description" content="谁的青春没有错？迟到学堂打手掌 你抿嘴偷笑
-暮风古榕捉迷藏 你总找我不到
-贴近水面看倒影 谁料这清明雨落
-两张荷叶穿插在沉默的人潮
-目 别你远离花轿
-谁 扮鬼脸逗你笑
-你 将和谁一梳齐眉老
-酒 买醉在万枫桥
-画 握笔也下不了
-许许梦回只得寂寥
-将血化墨 我画烟波 相随着
-这卷画 只留淡淡余热
-声声海誓 早被海潮吞没
-剩下一笔画未 苦笑砚无墨
-我欲成画未成画 你前生一笑
-却不敢言不能叹 凭栏夜雨飘摇">
+<meta name="twitter:title" content="java中常见的数据结构">
+<meta name="twitter:description" content="一、List,Map,Set之间的关系1、首先需要了解这三者的集成关系：Collection:List,Set
+Map:HashMap,HashTable
+从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。">
+<meta name="twitter:image" content="http://www.huihuicai.win/Users/wh/Downloads/20150820130200565.png">
   
     <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
   
@@ -202,58 +165,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-main/firstMain" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-skill/javaproblem" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      乱七八糟
+      java中常见的数据结构
     </h1>
   
 
-        <a href="/2016/12/05/main/firstMain/" class="archive-article-date">
-  	<time datetime="2016-12-05T14:55:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
+        <a href="/2016/11/30/skill/javaproblem/" class="archive-article-date">
+  	<time datetime="2016-11-30T14:47:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-30</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="谁的青春没有错？"><a href="#谁的青春没有错？" class="headerlink" title="谁的青春没有错？"></a>谁的青春没有错？</h2><p>迟到学堂打手掌 你抿嘴偷笑</p>
-<p>暮风古榕捉迷藏 你总找我不到</p>
-<p>贴近水面看倒影 谁料这清明雨落</p>
-<p>两张荷叶穿插在沉默的人潮</p>
-<p>目 别你远离花轿</p>
-<p>谁 扮鬼脸逗你笑</p>
-<p>你 将和谁一梳齐眉老</p>
-<p>酒 买醉在万枫桥</p>
-<p>画 握笔也下不了</p>
-<p>许许梦回只得寂寥</p>
-<p>将血化墨 我画烟波 相随着</p>
-<p>这卷画 只留淡淡余热</p>
-<p>声声海誓 早被海潮吞没</p>
-<p>剩下<a href="https://www.baidu.com/s?wd=%E4%B8%80%E7%AC%94%E7%94%BB&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y4P1-bmvm3uH6vP1K9P1bk0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnWcsnW61rHfk" target="_blank" rel="external">一笔画</a>未 苦笑砚无墨</p>
-<p>我欲成画未成画 你前生一笑</p>
-<p>却不敢言不能叹 凭栏夜雨飘摇</p>
-<p>我愿触碰未敢碰 却被这时空阻挠</p>
-<p>合上了眼想你能感觉得到</p>
-<p>风载着那画在飘</p>
+        <h3 id="一、List-Map-Set之间的关系"><a href="#一、List-Map-Set之间的关系" class="headerlink" title="一、List,Map,Set之间的关系"></a>一、List,Map,Set之间的关系</h3><h5 id="1、首先需要了解这三者的集成关系："><a href="#1、首先需要了解这三者的集成关系：" class="headerlink" title="1、首先需要了解这三者的集成关系："></a>1、首先需要了解这三者的集成关系：</h5><p>Collection:<strong>List</strong>,<strong>Set</strong></p>
+<p>Map<strong>:HashMap,</strong>HashTable</p>
+<p>从这个继承的关系上可以看出，Map和List、Set是不一样的，其父类不一样。Map是 以键值对（key-value）的形式存储数据的，而List和Set是列表的形式存放数据。</p>
 <a id="more"></a>
-<p>挂在我今生窗角 </p>
-<p>拥抱无奈只有遥遥</p>
-<p>有未落的一滴泪</p>
-<p>祭前世的一点醉</p>
-<p>最后把你补在画未</p>
-<p>将血化墨 你画烟波 淹埋我</p>
-<p>这卷画 残留熟悉余热</p>
-<p>声声山盟 早为重山相隔</p>
-<p>再下一世 你的画未画上我</p>
-<p>那迟到只是为了买给你桂花糖，我跑过长街弄巷</p>
-<p>捉迷藏又怕你着急了找不到，我故意露出衣角</p>
-<p>将血化墨 你画烟波 淹埋我</p>
-<p>这卷画 有你熟悉微热</p>
-<p>声声山盟 早为重山相隔</p>
+<h5 id="2、详细的分析："><a href="#2、详细的分析：" class="headerlink" title="2、详细的分析："></a>2、详细的分析：</h5><p>List的特点：元素是有序的放入，其中的元素是可以重复的；</p>
+<p>Map的特点：元素是按照key-value的形式放入的，没有放入的顺序；</p>
+<p>Set的特点：元素是无序放入的，元素不可重复。虽然是无序放入，但是该元素在set中位置是由hashcode决定的，位置是固定的。</p>
+<p>List有三个实现类：LinkedList、ArrayList、Vector</p>
+<p>Set有三个实现类：HashMap、HashTable、LinkedHashMap。</p>
+<p>（1）LinkedList、ArrayList、Vector：</p>
+<p>LinkedList：底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢。</p>
+<p>ArrayList：其内部是基于数组的方式保存数据的，数据之间的内存地址必须是连续的，所以随机访问速度会快，插入较慢。</p>
+<p>ArrayList和Vector的区别：ArrayList是非线程安全的，效率高；Vector是基于线程安全的，效率低 。</p>
+<p>（2）LinkedList、ArrayList、Vector：</p>
+<p>HashMap非线程安全，高效，支持null；HashTable线程安全，低效，不支持null。</p>
+<p><a href="[http://blog.csdn.net/speedme/article/details/22398395](http://blog.csdn.net/speedme/article/details/22398395">更多详情</a>)</p>
+<h5 id="3、各自特点"><a href="#3、各自特点" class="headerlink" title="3、各自特点"></a>3、各自特点</h5><p>（1）list保存数据是是按照进入的顺序，对数据不做编辑，因此对数据顺序有要求的情况下，可以使用list；</p>
+<p>（2）set保存数据不能重复，每个数据只能保存一份，其内部有自己的排序，因此数据不能重复时使用set；</p>
+<p>（3）map时根据key来进行保存的，每个key对应的value也只保存一份，其内部也会排序。</p>
+<h3 id="二、Android中的SparseXxx和Map的区别"><a href="#二、Android中的SparseXxx和Map的区别" class="headerlink" title="二、Android中的SparseXxx和Map的区别"></a>二、Android中的SparseXxx和Map<k,v>的区别</k,v></h3><p>在android中，很多时候我们都使用SparseXxx来取代map，这是因为前者的效率比后者高，前者是android官方提供的类，后者是java中的类。那么为什么效率会有差别呢？先来看下基础：</p>
+<h5 id="1-HashMap"><a href="#1-HashMap" class="headerlink" title="1.HashMap"></a>1.HashMap</h5><p>HashMap内部是使用一个默认容量为16的数组来存储数据的，而数组中每一个元素却又是一个链表的头结点，所以，更准确的来说，HashMap内部存储结构是使用哈希表的拉链结构（数组+链表），简称拉链法。示意图如下：</p>
+<p><img src="/Users/wh/Downloads/20150820130200565.png" alt="20150820130200565"></p>
+<p>存储的时候，都是按照取模的方式，确定需要存储的位置，然后依次以链表的形式接在后面，显而易见它的结构类似链表。当存储的数据量&gt;容量＊加载因子（默认是0.75）的时候，hashmap就会扩容，容量扩大到原来的2倍。那么问题就出现了，当数据量很大的时候，hashmap就不断的扩容，空间的浪费（容量＊0.25）就比较严重了，而且在遍历整个hashmap的时候，使用entry[]来遍历，效率就很低了。</p>
+<h5 id="2-SparseArray"><a href="#2-SparseArray" class="headerlink" title="2.SparseArray"></a>2.SparseArray</h5><p>SparseArray比HashMap更省内存，在某些条件下性能更好，主要是因为它避免了对key的自动装箱（int转为Integer类型），它内部则是通过两个数组来进行数据存储的，一个存储key，另外一个存储value，为了优化性能，它内部对数据还采取了压缩的方式来表示稀疏数组的数据，从而节约内存空间，我们从源码中可以看到key和value分别是用数组表示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">int</span>[] mKeys;</div><div class="line"><span class="keyword">private</span> Object[] mValues;</div></pre></td></tr></table></figure>
+<p>在其内部也是按照二分搜索的方式进行搜索的，所以在查询上面，速度比hashmap快了很多，因此在key为整形的情况下，避免拆箱装箱的情况下，使用SparseArray是非常合适的；但是在key的类型是string，数据量不大的话，使用hashmap。</p>
 
       
 
@@ -295,13 +250,13 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/青春/">青春</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
 	<i class="icon-calendar"></i>
-	<a class="article-category-link" href="/categories/main/">main</a>
+	<a class="article-category-link" href="/categories/skill/">skill</a>
 	</div>
 
 
@@ -353,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/05/main/firstMain/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/11/30/skill/javaproblem/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -367,9 +322,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2016/12/05/skill/serializable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Android中的序列化和反序列化
+        
+      </div>
+    </a>
   
-    <a href="/2016/12/05/skill/firstSkill/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java中常见的数据结构</div>
+  
+    <a href="/2016/11/20/essay/mian/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">心灵鸡汤</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -495,27 +459,23 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://github.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="http://stackoverflow.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>stackoverflow</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.codeproject.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codeproject</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://gold.xitu.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>稀土掘金</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://www.runoob.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>菜鸟教程</a>
             </li>
           
         </ul>
@@ -526,7 +486,7 @@
     
     	<section class="tools-section tools-section-me" v-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">一只会写程序的猿&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;</div>
   	  	
     	</section>
     
