@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.huihuicai.win">
-  <title>加密和签名 | 辉辉菜博客</title>
+  <title>webview调用本地相册 | 辉辉菜博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+  <meta name="description" content="webview调用本地相册&amp;emsp;&amp;emsp;webview调用本地的相册，其实是可以的，因为在WebChromeClient中提供了选择文件的方法回调。下面看看WebViewClient和WebChromeClient的区别。&amp;emsp;&amp;emsp;1.WebViewClient：主要负责一些webview的通知或者事件类的方法，比如说拦截、重定向。&amp;emsp;&amp;emsp;2.WebChro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加密和签名">
-<meta property="og:url" content="http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/index.html">
+<meta property="og:title" content="webview调用本地相册">
+<meta property="og:url" content="http://www.huihuicai.win/2017/01/03/skill/webview调用本地相册/index.html">
 <meta property="og:site_name" content="辉辉菜博客">
-<meta property="og:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
-<meta property="og:updated_time" content="2017-09-23T15:30:17.000Z">
+<meta property="og:description" content="webview调用本地相册&amp;emsp;&amp;emsp;webview调用本地的相册，其实是可以的，因为在WebChromeClient中提供了选择文件的方法回调。下面看看WebViewClient和WebChromeClient的区别。&amp;emsp;&amp;emsp;1.WebViewClient：主要负责一些webview的通知或者事件类的方法，比如说拦截、重定向。&amp;emsp;&amp;emsp;2.WebChro">
+<meta property="og:updated_time" content="2017-09-24T04:25:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="加密和签名">
-<meta name="twitter:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+<meta name="twitter:title" content="webview调用本地相册">
+<meta name="twitter:description" content="webview调用本地相册&amp;emsp;&amp;emsp;webview调用本地的相册，其实是可以的，因为在WebChromeClient中提供了选择文件的方法回调。下面看看WebViewClient和WebChromeClient的区别。&amp;emsp;&amp;emsp;1.WebViewClient：主要负责一些webview的通知或者事件类的方法，比如说拦截、重定向。&amp;emsp;&amp;emsp;2.WebChro">
   
     <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
   
@@ -152,30 +152,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-skill/加密和签名的异同" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-skill/webview调用本地相册" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      加密和签名
+      webview调用本地相册
     </h1>
   
 
-        <a href="/2016/12/15/skill/加密和签名的异同/" class="archive-article-date">
-  	<time datetime="2016-12-15T14:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
+        <a href="/2017/01/03/skill/webview调用本地相册/" class="archive-article-date">
+  	<time datetime="2017-01-03T15:05:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="RSA加密和签名不同"><a href="#RSA加密和签名不同" class="headerlink" title="RSA加密和签名不同"></a>RSA加密和签名不同</h3><p> &emsp;&emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。<br>&emsp;&emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。<br>&emsp;&emsp;RSA签名验证：私钥签名，公钥验证。对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
+        <h3 id="webview调用本地相册"><a href="#webview调用本地相册" class="headerlink" title="webview调用本地相册"></a>webview调用本地相册</h3><p>&emsp;&emsp;webview调用本地的相册，其实是可以的，因为在WebChromeClient中提供了选择文件的方法回调。下面看看WebViewClient和WebChromeClient的区别。<br>&emsp;&emsp;1.WebViewClient：主要负责一些webview的通知或者事件类的方法，比如说拦截、重定向。<br>&emsp;&emsp;2.WebChromeClient：主要负责处理一些js相关，web的title和图标之类的具体信息类的方法。<br>&emsp;&emsp;显然，如果要调用本地的相册，肯定是要重写WebChromeClient的相关方法的。而这个方法根据不同的系统版本：5.0以上，方法的名称是onShowFileChooser(…)；5.0以下，方法名称是openFileChooser(…)，参数不同而已。</p>
 <a id="more"></a>
-<p><a href="http://blog.csdn.net/qq_31860607/article/details/50948015" target="_blank" rel="external">链接在这里</a>，下面是原文：<br>RSA公钥加密体制包含如下3个算法：KeyGen（密钥生成算法），Encrypt（加密算法）以及Decrypt（解密算法）。<br>  ● 密钥生成算法以安全常数<strong><em>作为输入，输出一个公钥PK，和一个私钥SK。安全常数用于确定这个加密算法的安全性有多高，一般以加密算法使用的质数p的大小有关。<br>越大，质数p一般越大，保证体制有更高的安全性。在RSA中，密钥生成算法如下：算法首先随机产生两个不同大质数p和q，计算N=pq。随后，算法计算欧拉函数</em></strong>接下来，算法随机选择一个小于<em>*</em>的整数e，并计算e关于<br>的模反元素d。最后，公钥为PK=(N, e)，私钥为SK=（N, d）。<br>  ● 加密算法以公钥PK和待加密的消息M作为输入，输出密文CT。在RSA中，加密算法如下：算法直接输出密文为<br>  ● 解密算法以私钥SK和密文CT作为输入，输出消息M。在RSA中，解密算法如下：算法直接输出明文为由于e和d在<br>下互逆，因此我们有：<br>所以，从算法描述中我们也可以看出：公钥用于对数据进行加密，私钥用于对数据进行解密。当然了，这个也可以很直观的理解：公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。</p>
-<hr>
-<p>我们再来回顾一下RSA签名体制。签名体制同样包含3个算法：KeyGen（密钥生成算法），Sign（签名算法），Verify（验证算法）。<br>  ● 。密钥生成算法同样以安全常数<br>作为输入，输出一个公钥PK和一个私钥SK。在RSA签名中，密钥生成算法与加密算法完全相同。<br>  ● 。签名算法以私钥SK和待签名的消息M作为输入，输出签名<br>。在RSA签名中，签名算法直接输出签名为<br>。注意，签名算法和RSA加密体制中的解密算法非常像。<br>  ● 。验证算法以公钥PK，签名<br>以及消息M作为输入，输出一个比特值b。b=1意味着验证通过。b=0意味着验证不通过。在RSA签名中，验证算法首先计算<br>，随后对比M’与M，如果相等，则输出b=1，否则输出b=0。注意：验证算法和RSA加密体制中的加密算法非常像。<br>所以，在签名算法中，私钥用于对数据进行签名，公钥用于对签名进行验证。这也可以直观地进行理解：对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
-<p>理解二：<br>其实公钥和私钥都可以用来加密或解密—只要能保证用A加密，就用B解密就行。至于A是公钥还是私钥，其实可以根据不同的用途而定。<br>例如说，如果你想把某个消息秘密的发给某人，那你就可以用他的公钥加密。因为只有他知道他的私钥，所以这消息也就只有他本人能解开，于是你就达到了你的目的。<br>但是如果你想发布一个公告，需要一个手段来证明这确实是你本人发的，而不是其他人冒名顶替的。那你可以在你的公告开头或者结尾附上一段用你的私钥加密的内容（例如说就是你公告正文的一段话），那所有其他人都可以用你的公钥来解密，看看解出来的内容是不是相符的。如果是的话，那就说明这公告确实是你发的—因为只有你的公钥才能解开你的私钥加密的内容，而其他人是拿不到你的私钥的。<br>最后再说一下数字签名。<br>数字签名无非就两个目的：<br>证明这消息是你发的；<br>证明这消息内容确实是完整的—也就是没有经过任何形式的篡改（包括替换、缺少、新增）。<br>其实，上面关于“公告”那段内容，已经证明了第一点：证明这消息是你发的。<br>那么要做到第二点，也很简单，就是把你公告的原文做一次哈希（md5或者sha1都行），然后用你的私钥加密这段哈希作为签名，并一起公布出去。当别人收到你的公告时，他可以用你的公钥解密你的签名，如果解密成功，并且解密出来的哈希值确实和你的公告原文一致，那么他就证明了两点：这消息确实是你发的，而且内容是完整的。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>1.在WebChromeClient中重写openFileChooser和onShowFileChooser方法。需要注意的是openFileChooser在源码中标注的是@SystemApi，这意味着外面重写，需要去掉混淆。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//4.1以上4.4以下的系统web选择文件</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">openFileChooser</span><span class="params">(ValueCallback&lt;Uri&gt; uploadFile, String acceptType, String capture)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (fileChooserListener != <span class="keyword">null</span>) &#123;</div><div class="line">        fileChooserListener.onFileChooserApi16(uploadFile);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//4.4.x以上的系统web选择文件</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onShowFileChooser</span><span class="params">(WebView webView, ValueCallback&lt;Uri[]&gt; filePathCallback, FileChooserParams fileChooserParams)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (fileChooserListener != <span class="keyword">null</span>) &#123;</div><div class="line">        fileChooserListener.onFileChooserApi21(filePathCallback);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onShowFileChooser(webView, filePathCallback, fileChooserParams);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里fileChooserListener 是一个接口，分别回调api16和api21以上的方法。<br>2.在activity中启动访问相册的Internet：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//打开图库</span></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">openLocalGallery</span><span class="params">()</span> </span>&#123;</div><div class="line">    Intent picture = <span class="keyword">new</span> Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);</div><div class="line">    picture.setType(<span class="string">"image/*"</span>);</div><div class="line">    startActivityForResult(picture, REQUEST_PICTURE);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3.在onActivityResult中处理选择的图片：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onActivityResult(requestCode, resultCode, data);</div><div class="line">    Uri result = data == <span class="keyword">null</span> || resultCode != RESULT_OK ? <span class="keyword">null</span> : data.getData();</div><div class="line">    Uri fileUri = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">if</span> (requestCode == REQUEST_PICTURE &amp;&amp; result != <span class="keyword">null</span>) &#123;</div><div class="line">        String path = GalleryChooseUtil.getGalleryFilePath(<span class="keyword">this</span>, result);</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(path)) &#123;</div><div class="line">            fileUri = Uri.fromFile(<span class="keyword">new</span> File(path));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mFileCallback16 != <span class="keyword">null</span>) &#123;</div><div class="line">        mFileCallback16.onReceiveValue(fileUri);</div><div class="line">        mFileCallback16 = <span class="keyword">null</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mFileCallback21 != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (fileUri != <span class="keyword">null</span>) &#123;</div><div class="line">            mFileCallback21.onReceiveValue(<span class="keyword">new</span> Uri[]&#123;fileUri&#125;);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            mFileCallback21.onReceiveValue(<span class="keyword">null</span>);</div><div class="line">        &#125;</div><div class="line">        mFileCallback21 = <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这一步需要 注意的是，无论怎么样 ，一定要调用onReceiveValue，不然会报错的，getGalleryFilePath自己实现的方法，得到准确的path。</p>
+<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><p><a href="http://www.jianshu.com/p/48e688ce801f" target="_blank" rel="external">http://www.jianshu.com/p/48e688ce801f</a><br><a href="https://github.com/TeachCourse/AllDemos/tree/master/app/src/main/java/cn/teachcourse/view" target="_blank" rel="external">https://github.com/TeachCourse/AllDemos/tree/master/app/src/main/java/cn/teachcourse/view</a></p>
 
       
 
@@ -275,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2017/01/03/skill/webview调用本地相册/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +290,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/20/skill/java使用注解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/13/skill/AOP入门/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          注解
+          AOP学习入门
         
       </div>
     </a>
   
   
-    <a href="/2016/12/05/skill/android序列化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android中的序列化和反序列化</div>
+    <a href="/2016/12/29/skill/传值和引用传递/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java引用</div>
       <i class="icon-circle-right"></i>
     </a>
   

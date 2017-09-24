@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://www.huihuicai.win">
+  <title>AOP学习入门 | 辉辉菜博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="阿里云AOP学习：https://yq.aliyun.com/articles/58739AOP是面向切面编程，涉及到的概念也很多，具体的概念解释请移步到上面的连接去阅读。这里主要是实践的步骤。
+
+一、需要的环境&amp;emsp;&amp;emsp;在Android Studio中需要依赖AOP需要的jar包，这里使用的是Aspectj，所以就依赖Aspectj相关的工具。1.创建一个aspectj的modu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AOP学习入门">
+<meta property="og:url" content="http://www.huihuicai.win/2017/01/13/skill/AOP入门/index.html">
+<meta property="og:site_name" content="辉辉菜博客">
+<meta property="og:description" content="阿里云AOP学习：https://yq.aliyun.com/articles/58739AOP是面向切面编程，涉及到的概念也很多，具体的概念解释请移步到上面的连接去阅读。这里主要是实践的步骤。
+
+一、需要的环境&amp;emsp;&amp;emsp;在Android Studio中需要依赖AOP需要的jar包，这里使用的是Aspectj，所以就依赖Aspectj相关的工具。1.创建一个aspectj的modu">
+<meta property="og:updated_time" content="2017-09-24T04:26:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AOP学习入门">
+<meta name="twitter:description" content="阿里云AOP学习：https://yq.aliyun.com/articles/58739AOP是面向切面编程，涉及到的概念也很多，具体的概念解释请移步到上面的连接去阅读。这里主要是实践的步骤。
+
+一、需要的环境&amp;emsp;&amp;emsp;在Android Studio中需要依赖AOP需要的jar包，这里使用的是Aspectj，所以就依赖Aspectj相关的工具。1.创建一个aspectj的modu">
+  
+    <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container" v-bind:class="{ show: isCtnShow }">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" v-bind:class="{ show: isShow }">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/img/avatar.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">辉辉菜</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">不积跬步无以至千里</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">首页</a></li>
+	        
+				<li><a href="/categories/skill">技术</a></li>
+	        
+				<li><a href="/categories/essay">随笔</a></li>
+	        
+				<li><a href="/archives">全部</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+            
+    			
+    			<a data-idx="0" v-on:click="openSlider($event, 'friends')" href="javascript:void(0)">精品推荐</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" v-on:click="openSlider($event, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/huihuicai" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/p/1005053156793070/home?from=page_100505&mod=TAB&is_all=1#place" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hui-hui-cai/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:1270174074@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" v-bind:class="{ show: isShow, hide: isShow === false }">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">辉辉菜</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/img/avatar.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">辉辉菜</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">不积跬步无以至千里</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">首页</a></li>
+		        
+					<li><a href="/categories/skill">技术</a></li>
+		        
+					<li><a href="/categories/essay">随笔</a></li>
+		        
+					<li><a href="/archives">全部</a></li>
+		        
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/huihuicai" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/p/1005053156793070/home?from=page_100505&mod=TAB&is_all=1#place" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hui-hui-cai/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:1270174074@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-skill/AOP入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AOP学习入门
+    </h1>
+  
+
+        <a href="/2017/01/13/skill/AOP入门/" class="archive-article-date">
+  	<time datetime="2017-01-13T12:30:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>阿里云AOP学习：<a href="https://yq.aliyun.com/articles/58739" target="_blank" rel="external">https://yq.aliyun.com/articles/58739</a><br>AOP是面向切面编程，涉及到的概念也很多，具体的概念解释请移步到上面的连接去阅读。这里主要是实践的步骤。</p>
+</blockquote>
+<h4 id="一、需要的环境"><a href="#一、需要的环境" class="headerlink" title="一、需要的环境"></a>一、需要的环境</h4><p>&emsp;&emsp;在Android Studio中需要依赖AOP需要的jar包，这里使用的是Aspectj，所以就依赖Aspectj相关的工具。<br>1.创建一个aspectj的module工程，在这个module中，需要在gradle中配置Aspectj的相关依赖，具体如下：<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.aspectj.bridge.IMessage</div><div class="line"><span class="keyword">import</span> org.aspectj.bridge.MessageHandler</div><div class="line"><span class="keyword">import</span> org.aspectj.tools.ajc.Main</div><div class="line">apply plugin: <span class="string">'com.android.library'</span></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'org.aspectj:aspectjtools:1.8.9'</span></div><div class="line">        classpath <span class="string">'org.aspectj:aspectjweaver:1.8.9'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">android &#123;</div><div class="line">    compileSdkVersion <span class="number">25</span></div><div class="line">    buildToolsVersion <span class="string">"25.0.3"</span></div><div class="line">    defaultConfig &#123;</div><div class="line">        minSdkVersion <span class="number">15</span></div><div class="line">        targetSdkVersion <span class="number">25</span></div><div class="line">        versionCode <span class="number">1</span></div><div class="line">        versionName <span class="string">"1.0"</span></div><div class="line">        testInstrumentationRunner <span class="string">"android.support.test.runner.AndroidJUnitRunner"</span></div><div class="line">    &#125;</div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            <span class="function">minifyEnabled <span class="keyword">false</span></span></div><div class="line">            proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, 'proguard-rules.pro'</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">    <span class="function">compile <span class="title">fileTree</span><span class="params">(dir: <span class="string">'libs'</span>, include: [<span class="string">'*.jar'</span>])</span></span></div><div class="line">    <span class="title">androidTestCompile</span><span class="params">(<span class="string">'com.android.support.test.espresso:espresso-core:2.2.2'</span>, &#123;</span></div><div class="line">        exclude group: <span class="string">'com.android.support'</span>, <span class="keyword">module</span>: <span class="string">'support-annotations'</span></div><div class="line">    &#125;)</div><div class="line">    compile 'com.android.support:appcompat-v7:25.3.1'</div><div class="line">    testCompile 'junit:junit:4.12'</div><div class="line">    compile 'org.aspectj:aspectjrt:1.8.9'</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 这里函数调用使用的是闭包的方式，这里是groovy去掉了圆括号的写法</span></div><div class="line"><span class="comment">// 原型如：javaCompile.doLast(&#123;closure&#125;)</span></div><div class="line">android.libraryVariants.all &#123; variant -&gt;</div><div class="line">    JavaCompile javaCompile = variant.javaCompile</div><div class="line">    javaCompile.doLast &#123;</div><div class="line">        String[] args = [<span class="string">"-showWeaveInfo"</span>,</div><div class="line">                         <span class="string">"-1.5"</span>,</div><div class="line">                         <span class="string">"-inpath"</span>, javaCompile.destinationDir.toString(),</div><div class="line">                         <span class="string">"-aspectpath"</span>, javaCompile.classpath.asPath,</div><div class="line">                         <span class="string">"-d"</span>, javaCompile.destinationDir.toString(),</div><div class="line">                         <span class="string">"-classpath"</span>, javaCompile.classpath.asPath,</div><div class="line">                         <span class="string">"-bootclasspath"</span>, project.android.bootClasspath.join(File.pathSeparator)]</div><div class="line">        MessageHandler handler = <span class="keyword">new</span> MessageHandler(<span class="keyword">true</span>);</div><div class="line">        <span class="keyword">new</span> Main().run(args, handler)</div><div class="line">        def log = project.<span class="function">logger</span></div><div class="line">        <span class="title">for</span> <span class="params">(IMessage message : handler.getMessages(<span class="keyword">null</span>, <span class="keyword">true</span>)</span>) &#123;</div><div class="line">            <span class="keyword">switch</span> (message.getKind()) &#123;</div><div class="line">                <span class="keyword">case</span> IMessage.ABORT:</div><div class="line">                <span class="keyword">case</span> IMessage.ERROR:</div><div class="line">                <span class="keyword">case</span> IMessage.FAIL:</div><div class="line">                    log.error message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> IMessage.WARNING:</div><div class="line">                <span class="keyword">case</span> IMessage.INFO:</div><div class="line">                    log.info message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> IMessage.DEBUG:</div><div class="line">                    log.debug message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.主项目module中的配置，上面的module配置在主项目的gradle中依然要重新设置一下，否则工程无法正常进行开发。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.aspectj.bridge.IMessage</div><div class="line"><span class="keyword">import</span> org.aspectj.bridge.MessageHandler</div><div class="line"><span class="keyword">import</span> org.aspectj.tools.ajc.Main</div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        mavenCentral()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'org.aspectj:aspectjtools:1.8.9'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 这里函数调用使用的是闭包的方式，这里是groovy去掉了圆括号的写法</span></div><div class="line"><span class="comment">// 原型如：javaCompile.doLast(&#123;closure&#125;)</span></div><div class="line"><span class="keyword">final</span> def log = project.logger</div><div class="line"><span class="keyword">final</span> def variants = project.android.applicationVariants</div><div class="line">variants.all &#123; variant -&gt;</div><div class="line">    <span class="keyword">if</span> (!variant.buildType.isDebuggable()) &#123;</div><div class="line">        log.debug(<span class="string">"Skipping non-debuggable build type '$&#123;variant.buildType.name&#125;'."</span>)</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    JavaCompile javaCompile = variant.javaCompile</div><div class="line">    javaCompile.doLast &#123;</div><div class="line">        String[] args = [<span class="string">"-showWeaveInfo"</span>,</div><div class="line">                         <span class="string">"-1.5"</span>,</div><div class="line">                         <span class="string">"-inpath"</span>, javaCompile.destinationDir.toString(),</div><div class="line">                         <span class="string">"-aspectpath"</span>, javaCompile.classpath.asPath,</div><div class="line">                         <span class="string">"-d"</span>, javaCompile.destinationDir.toString(),</div><div class="line">                         <span class="string">"-classpath"</span>, javaCompile.classpath.asPath,</div><div class="line">                         <span class="string">"-bootclasspath"</span>, project.android.bootClasspath.join(File.pathSeparator)]</div><div class="line">        log.debug <span class="string">"ajc args: "</span> + Arrays.toString(args)</div><div class="line">        MessageHandler handler = <span class="keyword">new</span> MessageHandler(<span class="keyword">true</span>);</div><div class="line">        <span class="keyword">new</span> Main().run(args, handler);</div><div class="line">        <span class="keyword">for</span> (IMessage message : handler.getMessages(<span class="keyword">null</span>, <span class="keyword">true</span>)) &#123;</div><div class="line">            <span class="keyword">switch</span> (message.getKind()) &#123;</div><div class="line">                <span class="keyword">case</span> IMessage.ABORT:</div><div class="line">                <span class="keyword">case</span> IMessage.ERROR:</div><div class="line">                <span class="keyword">case</span> IMessage.FAIL:</div><div class="line">                    log.error message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> IMessage.WARNING:</div><div class="line">                    log.warn message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> IMessage.INFO:</div><div class="line">                    log.info message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> IMessage.DEBUG:</div><div class="line">                    log.debug message.message, message.thrown</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;至此环境的配置已经完成了，下面就可以开始编码了。其实上面如果Aspectj项目module不拆开，可以和主module合成一个module，这样的话gradle就只需要配置一份了。不过不建议这么做，我们的目的就是要解耦，所以拆成两个module合情合理。</p>
+<h4 id="二、编码实现"><a href="#二、编码实现" class="headerlink" title="二、编码实现"></a>二、编码实现</h4><p>1.定义注解。这是开始的第一步，因为我们的aop就是基于注解来来工作的（自定义注解自行学习）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Target</span>(ElementType.METHOD)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> PermissionAnnotation &#123;</div><div class="line">    <span class="function">String <span class="title">permission</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个注解的意思已经很明了了，在运行时执行，针对method（方法），参数需要一个String。<br>2.处理逻辑。这一步是通过Aspectj插件拿到注解标识的入口，进行逻辑处理，逻辑处理类需要使用Aspectj的Aspect注解标注：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Aspect</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PermissionAspectj</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String PERMISSION_METHOD =     <span class="string">"execution(@com.huihuicai.aspectj.annotation.PermissionAnnotation * *(..))"</span>;</div><div class="line">    <span class="meta">@Pointcut</span>(PERMISSION_METHOD)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">executePermission</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Around</span>(<span class="string">"executePermission()"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">weaveJoinPoint</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</div><div class="line">        MethodSignature signature = (MethodSignature) joinPoint.getSignature();</div><div class="line">        PermissionAnnotation ann = signature.getMethod().getAnnotation(PermissionAnnotation.class);</div><div class="line">        String permission = <span class="string">""</span>;</div><div class="line">        Activity context = <span class="keyword">null</span>;</div><div class="line">        Object o = joinPoint.getThis();</div><div class="line">        <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Activity) &#123;</div><div class="line">            context = (Activity) o;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Fragment) &#123;</div><div class="line">            context = ((Fragment) o).getActivity();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (o <span class="keyword">instanceof</span> android.support.v4.app.Fragment) &#123;</div><div class="line">            context = ((android.support.v4.app.Fragment) o).getActivity();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (ann != <span class="keyword">null</span>) &#123;</div><div class="line">            permission = ann.permission();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (context != <span class="keyword">null</span> &amp;&amp; !TextUtils.isEmpty(permission)) &#123;</div><div class="line">            <span class="keyword">if</span> (ContextCompat.checkSelfPermission(context, permission) !=</div><div class="line">                    PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                LogUtil.print(<span class="string">"permission"</span>, <span class="string">"权限还没申请呢"</span>);</div><div class="line">                <span class="keyword">if</span> (ActivityCompat.shouldShowRequestPermissionRationale(context, permission)) &#123;</div><div class="line">                    <span class="keyword">new</span> AlertDialog.Builder(context)</div><div class="line">                            .setTitle(<span class="string">"权限管理"</span>)</div><div class="line">                            .setMessage(<span class="string">"缺少程序所需要的权限，应用无法使用，请前往“权限管理”页面打开相应权限"</span>)</div><div class="line">                            .setPositiveButton(<span class="string">"好的"</span>, <span class="keyword">null</span>)</div><div class="line">                            .setNegativeButton(<span class="string">"取消"</span>, <span class="keyword">null</span>)</div><div class="line">                            .create()</div><div class="line">                            .show();</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    ActivityCompat.requestPermissions(context, <span class="keyword">new</span> String[]&#123;permission&#125;, <span class="number">0</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> joinPoint.proceed();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>@Pointcut</strong>这个注解就是切点的意思，也就是需要用哪中操作在哪个地方进行逻辑处理。通俗的讲就是触发的条件。这里面的execution意思已经很明确了，就是在后面的这个地方执行的时候。<br><strong>@Around</strong>意思是在后面的这个方法的前后执行，具体在前在后，我们在方法体中去实现。而它的参数正好是Pointcut这个注解标识的方法，我们的方法的参数是ProceedingJoinPoint（连接点），这就可以回到aop的概念中去了，任何一个方法和执行等都可以称作一个连接点。好了，回到这里，这个ProceedingJoinPoint点就是我们Pointcut的execution条件。捋一下，这个参数的连接点，归根到底就是Pointcut的目标（可能是方法，也可能是其他）。那我们处理逻辑也就可以进行下去了，因为我们通过JoinPoint可以拿到我们想要干涉的位置的句柄了。在方法体中拿到了注解中测参数，就可以根据这个参数进行逻辑处理了，然后调用joinPoint.proceed()就是执行joinPoint的原始方法了，这样就相当于在原始方法中插入了代码，而不用改原始的代码。<br>3.业务层加注解。把定义好的注解加入到业务层中去，比如打开相机的时候，在打开相机的方法前面加入权限的注解：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@PermissionAnnotation</span>(permission = Manifest.permission.CAMERA)</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testPermission</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Toast.makeText(<span class="keyword">this</span>, <span class="string">"检查权限"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>自此，完整的实现步骤已经完成了，这里只是一个简单的权限检查的功能，如果需要AOP实现其他的功能，可是按照这个顺序进行编码实现。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-calendar"></i>
+	<a class="article-category-link" href="/categories/skill/">skill</a>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2017/01/13/skill/AOP入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/04/skill/APT入门/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          APT入门
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/03/skill/webview调用本地相册/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webview调用本地相册</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 辉辉菜
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: false
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col" v-bind:class="{ show: isShow, hide: isShow === false }" v-on:click="stop($event)">
+  <div class="tools-wrap">
+    
+
+    
+    	<section class="tools-section tools-section-friends" v-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://github.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://stackoverflow.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>stackoverflow</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.codeproject.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codeproject</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gold.xitu.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>稀土掘金</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.runoob.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>菜鸟教程</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" v-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">一只会写程序的猿&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

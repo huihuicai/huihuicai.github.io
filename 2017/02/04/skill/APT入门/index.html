@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://www.huihuicai.win">
+  <title>APT入门 | 辉辉菜博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="APT资料参考：http://blog.csdn.net/asialiyazhou/article/details/53055460android-apt是一个gradle的插件，我们可以利用这个插件，在编译的时候动态的生成代码，减少一部风的编码工作量，比如我们使用的butternife等。
+
+一、环境配置首先，需要android-apt的这个gradle插件，所以需要在项目的gradle文件中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APT入门">
+<meta property="og:url" content="http://www.huihuicai.win/2017/02/04/skill/APT入门/index.html">
+<meta property="og:site_name" content="辉辉菜博客">
+<meta property="og:description" content="APT资料参考：http://blog.csdn.net/asialiyazhou/article/details/53055460android-apt是一个gradle的插件，我们可以利用这个插件，在编译的时候动态的生成代码，减少一部风的编码工作量，比如我们使用的butternife等。
+
+一、环境配置首先，需要android-apt的这个gradle插件，所以需要在项目的gradle文件中">
+<meta property="og:updated_time" content="2017-09-24T04:27:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="APT入门">
+<meta name="twitter:description" content="APT资料参考：http://blog.csdn.net/asialiyazhou/article/details/53055460android-apt是一个gradle的插件，我们可以利用这个插件，在编译的时候动态的生成代码，减少一部风的编码工作量，比如我们使用的butternife等。
+
+一、环境配置首先，需要android-apt的这个gradle插件，所以需要在项目的gradle文件中">
+  
+    <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container" v-bind:class="{ show: isCtnShow }">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" v-bind:class="{ show: isShow }">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/img/avatar.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">辉辉菜</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">不积跬步无以至千里</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">首页</a></li>
+	        
+				<li><a href="/categories/skill">技术</a></li>
+	        
+				<li><a href="/categories/essay">随笔</a></li>
+	        
+				<li><a href="/archives">全部</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+            
+    			
+    			<a data-idx="0" v-on:click="openSlider($event, 'friends')" href="javascript:void(0)">精品推荐</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" v-on:click="openSlider($event, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/huihuicai" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/p/1005053156793070/home?from=page_100505&mod=TAB&is_all=1#place" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hui-hui-cai/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:1270174074@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" v-bind:class="{ show: isShow, hide: isShow === false }">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">辉辉菜</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/img/avatar.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">辉辉菜</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">不积跬步无以至千里</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">首页</a></li>
+		        
+					<li><a href="/categories/skill">技术</a></li>
+		        
+					<li><a href="/categories/essay">随笔</a></li>
+		        
+					<li><a href="/archives">全部</a></li>
+		        
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/huihuicai" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/p/1005053156793070/home?from=page_100505&mod=TAB&is_all=1#place" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hui-hui-cai/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:1270174074@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-skill/APT入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      APT入门
+    </h1>
+  
+
+        <a href="/2017/02/04/skill/APT入门/" class="archive-article-date">
+  	<time datetime="2017-02-04T14:23:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>APT资料参考：<a href="http://blog.csdn.net/asialiyazhou/article/details/53055460" target="_blank" rel="external">http://blog.csdn.net/asialiyazhou/article/details/53055460</a><br>android-apt是一个gradle的插件，我们可以利用这个插件，在编译的时候动态的生成代码，减少一部风的编码工作量，比如我们使用的butternife等。</p>
+</blockquote>
+<h4 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h4><p>首先，需要android-apt的这个gradle插件，所以需要在项目的gradle文件中添加classpath：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath <span class="string">'com.neenbedankt.gradle.plugins:android-apt:1.8'</span></div></pre></td></tr></table></figure></p>
+<p>其次，需要在主module的gradle文件中添加这个插件，添加依赖关系如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'com.neenbedankt.android-apt'</span></div></pre></td></tr></table></figure></p>
+<p>这样整个需要的插件已经配置好了，下面就可以开始编码了。<br><a id="more"></a></p>
+<h4 id="二、编码实现"><a href="#二、编码实现" class="headerlink" title="二、编码实现"></a>二、编码实现</h4><p>要想在编译期生成代码，那么需要搞清楚几个问题：什么时间生成、生成什么代码、怎么生效？那么就大致确定了三个方面的问题：提供注解、编译生成代码、调用，那么就可以分成三个模块：annotation、compiler、Api，通过这三个模块来解决上面三个问题。</p>
+<h5 id="1-module-annotation。"><a href="#1-module-annotation。" class="headerlink" title="1.module-annotation。"></a>1.module-annotation。</h5><p>通过名称就知道，这个模块是定义一些annotation的，这些annotation是标注在业务代码上，也是我们要生成代码的主要依据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.CLASS)</div><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> BindView &#123;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">value</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里只是一个例子，如果需要其他的注解，可以自行定义。</p>
+<h5 id="2-module-compiler。"><a href="#2-module-compiler。" class="headerlink" title="2.module-compiler。"></a>2.module-compiler。</h5><p>这个模块主要是编译生成代码的，也就是说它和Android是没有必然联系的，仅仅是生成一个Java文件存储在本地。所以这个module是一个Java library，注意不要弄成Android library了，弄错了会导致编译失败的。既然要生成Java文件，肯定需要这个文件的package信息、类名、类里面的方法、方法的参数等等信息。这些信息需要从注解中来获得，下面就一步步的往下面执行。<br>（1）注解对应的信息类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewField</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> VariableElement mVariableElement;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mResId;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ViewField</span><span class="params">(Element element)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (element == <span class="keyword">null</span> || element.getKind() != ElementKind.FIELD) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"This is not field annotation"</span>);</div><div class="line">        &#125;</div><div class="line">        mVariableElement = (VariableElement) element;</div><div class="line">        BindView ann = mVariableElement.getAnnotation(BindView.class);</div><div class="line">        <span class="keyword">if</span> (ann != <span class="keyword">null</span>) &#123;</div><div class="line">            mResId = ann.value();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"This annotation lack value"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//获取变量的名字</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Name <span class="title">getVariableName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mVariableElement.getSimpleName();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//获取value的值</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getResId</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mResId;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//获取得到的变量的类型</span></div><div class="line">    <span class="function"><span class="keyword">public</span> TypeMirror <span class="title">getVariableType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mVariableElement.asType();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;从这个代码中很容易看出来，其作用就是从注解中获取到注解的相关信息，这里是一个通过resId初始化view的注解，三个方法最终获得了注解包括的信息。<br>（2）生成Java文件的辅助类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationClass</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ClassName PROVIDER =</div><div class="line">            ClassName.get(<span class="string">"com.huihuicai.finder.provider"</span>, <span class="string">"Provider"</span>);</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ClassName FINDER =</div><div class="line">            ClassName.get(<span class="string">"com.huihuicai.finder"</span>, <span class="string">"Finder"</span>);</div><div class="line">    <span class="keyword">private</span> TypeElement mTypeElement;</div><div class="line">    <span class="keyword">private</span> Elements mElements;</div><div class="line">    <span class="keyword">private</span> List&lt;ViewField&gt; mViewField;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AnnotationClass</span><span class="params">(TypeElement typeElement, Elements elements)</span> </span>&#123;</div><div class="line">        mTypeElement = typeElement;</div><div class="line">        mElements = elements;</div><div class="line">        mViewField = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//获取element的class name</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getClassName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mTypeElement.getQualifiedName().toString();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewField</span><span class="params">(ViewField viewField)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (viewField != <span class="keyword">null</span>) &#123;</div><div class="line">            mViewField.add(viewField);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 构造整个类</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> JavaFile <span class="title">createFinder</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//构造方法（就是要实现Finder的finder(host,source,provider)）</span></div><div class="line">        MethodSpec.Builder injectBuilder = MethodSpec.methodBuilder(<span class="string">"finder"</span>);</div><div class="line">        injectBuilder.addModifiers(PUBLIC)</div><div class="line">                .addAnnotation(Override.class)</div><div class="line">                .addParameter(TypeName.get(mTypeElement.asType()), <span class="string">"host"</span>, FINAL)</div><div class="line">                .addParameter(TypeName.OBJECT, <span class="string">"source"</span>)</div><div class="line">                .addParameter(PROVIDER, <span class="string">"provider"</span>);</div><div class="line">        <span class="comment">//遍历每一个注解，生成findView的方法:view = activity.findViewById(id)</span></div><div class="line">        <span class="keyword">for</span> (ViewField field : mViewField) &#123;</div><div class="line">            injectBuilder.addStatement(<span class="string">"host.$N = ($T)(provider.findView(source, $L))"</span>,</div><div class="line">                    field.getVariableName(), ClassName.get(field.getVariableType()), field.getResId());</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//获取当前的mTypeElement所在的package</span></div><div class="line">        String packageName = mElements.getPackageOf(mTypeElement).getQualifiedName().toString();</div><div class="line">        <span class="comment">//构造整个类</span></div><div class="line">        TypeSpec typeSpec = TypeSpec.classBuilder(mTypeElement.getSimpleName() + <span class="string">"$$Finder"</span>)</div><div class="line">                .addModifiers(PUBLIC)<span class="comment">//修饰符</span></div><div class="line">                .addSuperinterface(ParameterizedTypeName.get(FINDER, TypeName.get(mTypeElement.asType())))</div><div class="line">                .addMethod(injectBuilder.build())<span class="comment">//里面的方法</span></div><div class="line">                .build();</div><div class="line">        <span class="keyword">return</span> JavaFile.builder(packageName, typeSpec).build();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这个也很简单了，主要就是构造一个Java类的模板，根据传入进来的类型参数（Element不懂的需要自行查看）生成整个来的package，方法，最后根据Javapoet自动生成目标类。所以项目的gradle中需要依赖自动生成Java代码的工具，配置如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">    <span class="function">compile <span class="title">fileTree</span><span class="params">(dir: <span class="string">'libs'</span>, include: [<span class="string">'*.jar'</span>])</span></span></div><div class="line">    compile 'com.google.auto.service:auto-service:1.0-rc3'</div><div class="line">    compile 'com.squareup:javapoet:1.9.0'</div><div class="line">&#125;</div><div class="line">sourceCompatibility = <span class="string">'1.7'</span></div><div class="line">targetCompatibility = <span class="string">'1.7'</span></div><div class="line"><span class="comment">//编码错误，强制使用utf-8编码</span></div><div class="line">tasks.withType(org.gradle.api.tasks.compile.JavaCompile) &#123;</div><div class="line">    options.encoding = <span class="string">"UTF-8"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这里使用注入的方式，把注解的信息viewFeild注入进行，然后分成3部分生成代码，返回一个JavaFile对象。<br>（3）编译期动态的生成代码保存到本地。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@AutoService</span>(Processor.class)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FinderProcessor</span> <span class="keyword">extends</span> <span class="title">AbstractProcessor</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Filer mFiler;</div><div class="line">    <span class="keyword">private</span> Elements mElements;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> HashMap&lt;String, AnnotationClass&gt; mProxyMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ProcessingEnvironment pe)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.init(pe);</div><div class="line">        mFiler = pe.getFiler();</div><div class="line">        mElements = pe.getElementUtils();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Set&lt;String&gt; <span class="title">getSupportedAnnotationTypes</span><span class="params">()</span> </span>&#123;</div><div class="line">        Set&lt;String&gt; types = <span class="keyword">new</span> LinkedHashSet&lt;&gt;();</div><div class="line">        types.add(BindView.class.getCanonicalName());</div><div class="line">        <span class="keyword">return</span> types;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> SourceVersion <span class="title">getSupportedSourceVersion</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> SourceVersion.latestSupported();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">process</span><span class="params">(Set&lt;? extends TypeElement&gt; set, RoundEnvironment re)</span> </span>&#123;</div><div class="line">        mProxyMap.clear();</div><div class="line">        <span class="comment">//得到所有标注的有指定的注解的Element</span></div><div class="line">        Set&lt;? extends Element&gt; elements = re.getElementsAnnotatedWith(BindView.class);</div><div class="line">        <span class="keyword">for</span> (Element element : elements) &#123;</div><div class="line">            <span class="comment">//每个element有类型和对应变量名称</span></div><div class="line">            <span class="comment">//1.得到整个element块的parent，相当于root层，也就是整个类的最外层</span></div><div class="line">            TypeElement classElement = (TypeElement) element.getEnclosingElement();</div><div class="line">            <span class="comment">//2.得到这个类的名称</span></div><div class="line">            String className = classElement.getQualifiedName().toString();</div><div class="line">            <span class="comment">//3.从map中获取到类名对应的AnnotationClass是不是存在</span></div><div class="line">            AnnotationClass annotationClass = mProxyMap.get(className);</div><div class="line">            <span class="comment">//4.为空的话就构建一个</span></div><div class="line">            <span class="keyword">if</span> (annotationClass == <span class="keyword">null</span>) &#123;</div><div class="line">                annotationClass = <span class="keyword">new</span> AnnotationClass(classElement, mElements);</div><div class="line">                mProxyMap.put(className, annotationClass);</div><div class="line">            &#125;</div><div class="line">            <span class="comment">//5.把获取到的ViewField添加到AnnotationClass中去</span></div><div class="line">            ViewField viewField = <span class="keyword">new</span> ViewField(element);</div><div class="line">            annotationClass.addViewField(viewField);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">for</span> (AnnotationClass annotation : mProxyMap.values()) &#123;</div><div class="line">                <span class="keyword">if</span> (annotation == <span class="keyword">null</span>) &#123;</div><div class="line">                    <span class="keyword">continue</span>;</div><div class="line">                &#125;</div><div class="line">                annotation.createFinder().writeTo(mFiler);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这里面使用了@AutoService(Processor.class)注解，是使用goodle的自动生成META-INF的信息，这个类会在编译的时候执行process方法，然后通过使用的注解（自己定义使用的那个注解）得到element集合，遍历所有的element，获取到不同的类class，然后得到viewField信息，生成JavaFile，最后写入到本地。</p>
+<h5 id="3-module-api。"><a href="#3-module-api。" class="headerlink" title="3.module-api。"></a>3.module-api。</h5><p>这个模块就很简单了，主要是提供业务层调用的api。前面的Java类都生成了，现在就缺怎么去调用，怎么使用了，这里api提供接口，但是要本着简洁的目的。<br>（1）业务层使用的入口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewFinder</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ActivityProvider mActivityProvider = <span class="keyword">new</span> ActivityProvider();</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ViewProvider mViewProvider = <span class="keyword">new</span> ViewProvider();</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Finder&gt; mFinderMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">inject</span><span class="params">(Object host)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (host == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"The argument can't be null"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (host <span class="keyword">instanceof</span> Activity) &#123;</div><div class="line">            inject(host, host, mActivityProvider);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (host <span class="keyword">instanceof</span> View) &#123;</div><div class="line">            inject(host, host, mViewProvider);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">inject</span><span class="params">(Object host, Object source, Provider provider)</span> </span>&#123;</div><div class="line">        String className = host.getClass().getName();</div><div class="line">        Finder finder = mFinderMap.get(className);</div><div class="line">        <span class="keyword">if</span> (finder == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                Class&lt;?&gt; clazz = Class.forName(className + <span class="string">"$$Finder"</span>);</div><div class="line">                finder = (Finder) clazz.newInstance();</div><div class="line">                mFinderMap.put(className, finder);</div><div class="line">            &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (finder != <span class="keyword">null</span>) &#123;</div><div class="line">            finder.finder(host, source, provider);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这里对外抛出了一个static方法入口inject(object)，这里区分了是从activity还是view进行注册的，然后根据不同的来源调用不同provider来进行业务处理。那provider是啥呢？<br>（2）provider提供不同的业务处理。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Provider</span> </span>&#123;</div><div class="line">    <span class="function">Context <span class="title">getContext</span><span class="params">(Object source)</span></span>;</div><div class="line"></div><div class="line">    <span class="function">View <span class="title">findView</span><span class="params">(Object source, <span class="keyword">int</span> id)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这是一个接口，从接口的方法和结合本demo可以看出，主要是为了得得到Context和通过id找到view，在ActivityProvider和ViewProvider的实现有所不同：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActivityProvider</span> <span class="keyword">implements</span> <span class="title">Provider</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Context <span class="title">getContext</span><span class="params">(Object source)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (Activity) source;</div><div class="line">    &#125;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">findView</span><span class="params">(Object source, <span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> ((Activity) source).findViewById(id);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewProvider</span> <span class="keyword">implements</span> <span class="title">Provider</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Context <span class="title">getContext</span><span class="params">(Object source)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> ((View) source).getContext();</div><div class="line">    &#125;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">findView</span><span class="params">(Object source, <span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> ((View) source).findViewById(id);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>（3）finder接口，生成的Java类来实现，通过传入provider来实现不同的找view的方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Finder</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">finder</span><span class="params">(T host, Object source, Provider provider)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这个Finder接口是在哪里实现的呢？其实在compiler中生成JavaFile的时候就实现了这个方法，正好在ViewFinder中，我们直接实例化一个Class的时候，就回调了这个finder方法，也就是实现了业务逻辑中的findView的逻辑。</p>
+<h5 id="4-业务层调用。"><a href="#4-业务层调用。" class="headerlink" title="4.业务层调用。"></a>4.业务层调用。</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@BindView</span>(R.id.btn_apt)</div><div class="line">Button btnApt;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    ViewFinder.inject(<span class="keyword">this</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上就正好实现了一套完整的逻辑。注意：生成的Java文件是在build目录下generatred/resource/apt中。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-calendar"></i>
+	<a class="article-category-link" href="/categories/skill/">skill</a>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2017/02/04/skill/APT入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/16/skill/AS中自定义Gradle插件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          AS中自定义Gradle插件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/13/skill/AOP入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AOP学习入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 辉辉菜
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: false
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col" v-bind:class="{ show: isShow, hide: isShow === false }" v-on:click="stop($event)">
+  <div class="tools-wrap">
+    
+
+    
+    	<section class="tools-section tools-section-friends" v-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://github.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://stackoverflow.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>stackoverflow</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.codeproject.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codeproject</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gold.xitu.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>稀土掘金</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.runoob.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>菜鸟教程</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" v-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">一只会写程序的猿&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

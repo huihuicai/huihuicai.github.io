@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.huihuicai.win">
-  <title>加密和签名 | 辉辉菜博客</title>
+  <title>注解 | 辉辉菜博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+  <meta name="description" content="java中使用注解&amp;emsp;&amp;emsp;在java中有注解这个功能，比如常见的@Override等关键字，其作用自然不必多说，用起来也十分的方便，接下来就简单的了解一下注解。
+一、注解的类型&amp;emsp;&amp;emsp;注解的类型大致可以分两类：元注解、自定义注解。其中自定义注解可以根据Retention分为运行时注解、编译注解等，根据标注的位置又可分为方法注解、域注解、类注解、包注解等等.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加密和签名">
-<meta property="og:url" content="http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/index.html">
+<meta property="og:title" content="注解">
+<meta property="og:url" content="http://www.huihuicai.win/2016/12/20/skill/java使用注解/index.html">
 <meta property="og:site_name" content="辉辉菜博客">
-<meta property="og:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
-<meta property="og:updated_time" content="2017-09-23T15:30:17.000Z">
+<meta property="og:description" content="java中使用注解&amp;emsp;&amp;emsp;在java中有注解这个功能，比如常见的@Override等关键字，其作用自然不必多说，用起来也十分的方便，接下来就简单的了解一下注解。
+一、注解的类型&amp;emsp;&amp;emsp;注解的类型大致可以分两类：元注解、自定义注解。其中自定义注解可以根据Retention分为运行时注解、编译注解等，根据标注的位置又可分为方法注解、域注解、类注解、包注解等等.">
+<meta property="og:updated_time" content="2017-09-24T02:01:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="加密和签名">
-<meta name="twitter:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+<meta name="twitter:title" content="注解">
+<meta name="twitter:description" content="java中使用注解&amp;emsp;&amp;emsp;在java中有注解这个功能，比如常见的@Override等关键字，其作用自然不必多说，用起来也十分的方便，接下来就简单的了解一下注解。
+一、注解的类型&amp;emsp;&amp;emsp;注解的类型大致可以分两类：元注解、自定义注解。其中自定义注解可以根据Retention分为运行时注解、编译注解等，根据标注的位置又可分为方法注解、域注解、类注解、包注解等等.">
   
     <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
   
@@ -152,30 +155,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-skill/加密和签名的异同" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-skill/java使用注解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      加密和签名
+      注解
     </h1>
   
 
-        <a href="/2016/12/15/skill/加密和签名的异同/" class="archive-article-date">
-  	<time datetime="2016-12-15T14:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
+        <a href="/2016/12/20/skill/java使用注解/" class="archive-article-date">
+  	<time datetime="2016-12-20T13:34:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="RSA加密和签名不同"><a href="#RSA加密和签名不同" class="headerlink" title="RSA加密和签名不同"></a>RSA加密和签名不同</h3><p> &emsp;&emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。<br>&emsp;&emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。<br>&emsp;&emsp;RSA签名验证：私钥签名，公钥验证。对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
+        <h3 id="java中使用注解"><a href="#java中使用注解" class="headerlink" title="java中使用注解"></a>java中使用注解</h3><p>&emsp;&emsp;在java中有注解这个功能，比如常见的<strong>@Override</strong>等关键字，其作用自然不必多说，用起来也十分的方便，接下来就简单的了解一下注解。</p>
+<h4 id="一、注解的类型"><a href="#一、注解的类型" class="headerlink" title="一、注解的类型"></a>一、注解的类型</h4><p>&emsp;&emsp;注解的类型大致可以分两类：<strong>元注解</strong>、<strong>自定义注解</strong>。其中自定义注解可以根据Retention分为<strong>运行时注解</strong>、<strong>编译注解</strong>等，根据标注的位置又可分为<strong>方法注解</strong>、<strong>域注解</strong>、<strong>类注解</strong>、<strong>包注解</strong>等等.</p>
 <a id="more"></a>
-<p><a href="http://blog.csdn.net/qq_31860607/article/details/50948015" target="_blank" rel="external">链接在这里</a>，下面是原文：<br>RSA公钥加密体制包含如下3个算法：KeyGen（密钥生成算法），Encrypt（加密算法）以及Decrypt（解密算法）。<br>  ● 密钥生成算法以安全常数<strong><em>作为输入，输出一个公钥PK，和一个私钥SK。安全常数用于确定这个加密算法的安全性有多高，一般以加密算法使用的质数p的大小有关。<br>越大，质数p一般越大，保证体制有更高的安全性。在RSA中，密钥生成算法如下：算法首先随机产生两个不同大质数p和q，计算N=pq。随后，算法计算欧拉函数</em></strong>接下来，算法随机选择一个小于<em>*</em>的整数e，并计算e关于<br>的模反元素d。最后，公钥为PK=(N, e)，私钥为SK=（N, d）。<br>  ● 加密算法以公钥PK和待加密的消息M作为输入，输出密文CT。在RSA中，加密算法如下：算法直接输出密文为<br>  ● 解密算法以私钥SK和密文CT作为输入，输出消息M。在RSA中，解密算法如下：算法直接输出明文为由于e和d在<br>下互逆，因此我们有：<br>所以，从算法描述中我们也可以看出：公钥用于对数据进行加密，私钥用于对数据进行解密。当然了，这个也可以很直观的理解：公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。</p>
-<hr>
-<p>我们再来回顾一下RSA签名体制。签名体制同样包含3个算法：KeyGen（密钥生成算法），Sign（签名算法），Verify（验证算法）。<br>  ● 。密钥生成算法同样以安全常数<br>作为输入，输出一个公钥PK和一个私钥SK。在RSA签名中，密钥生成算法与加密算法完全相同。<br>  ● 。签名算法以私钥SK和待签名的消息M作为输入，输出签名<br>。在RSA签名中，签名算法直接输出签名为<br>。注意，签名算法和RSA加密体制中的解密算法非常像。<br>  ● 。验证算法以公钥PK，签名<br>以及消息M作为输入，输出一个比特值b。b=1意味着验证通过。b=0意味着验证不通过。在RSA签名中，验证算法首先计算<br>，随后对比M’与M，如果相等，则输出b=1，否则输出b=0。注意：验证算法和RSA加密体制中的加密算法非常像。<br>所以，在签名算法中，私钥用于对数据进行签名，公钥用于对签名进行验证。这也可以直观地进行理解：对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
-<p>理解二：<br>其实公钥和私钥都可以用来加密或解密—只要能保证用A加密，就用B解密就行。至于A是公钥还是私钥，其实可以根据不同的用途而定。<br>例如说，如果你想把某个消息秘密的发给某人，那你就可以用他的公钥加密。因为只有他知道他的私钥，所以这消息也就只有他本人能解开，于是你就达到了你的目的。<br>但是如果你想发布一个公告，需要一个手段来证明这确实是你本人发的，而不是其他人冒名顶替的。那你可以在你的公告开头或者结尾附上一段用你的私钥加密的内容（例如说就是你公告正文的一段话），那所有其他人都可以用你的公钥来解密，看看解出来的内容是不是相符的。如果是的话，那就说明这公告确实是你发的—因为只有你的公钥才能解开你的私钥加密的内容，而其他人是拿不到你的私钥的。<br>最后再说一下数字签名。<br>数字签名无非就两个目的：<br>证明这消息是你发的；<br>证明这消息内容确实是完整的—也就是没有经过任何形式的篡改（包括替换、缺少、新增）。<br>其实，上面关于“公告”那段内容，已经证明了第一点：证明这消息是你发的。<br>那么要做到第二点，也很简单，就是把你公告的原文做一次哈希（md5或者sha1都行），然后用你的私钥加密这段哈希作为签名，并一起公布出去。当别人收到你的公告时，他可以用你的公钥解密你的签名，如果解密成功，并且解密出来的哈希值确实和你的公告原文一致，那么他就证明了两点：这消息确实是你发的，而且内容是完整的。</p>
+<h4 id="二、注解的自定义"><a href="#二、注解的自定义" class="headerlink" title="二、注解的自定义"></a>二、注解的自定义</h4><p>注解的自定义分为两步：<strong>定义注解类</strong>、<strong>定义注解解释方法</strong>。<br>（1）<strong>定义关键字</strong>：Retention（定义注解的时间，比如运行时，编译时）、Target（定义作用域，比如Field,Method,Class等）、Inherited（是否可以被继承，默认是不可以的）、Documented（是否保存文档）。一般主要用到前面两个关键字。<br>（2）<strong>解释注解的方法</strong>：定义解释注解的方法就是，把自己 定义的类找到，通过不同的位置，找到相应的注解的集合，然后对注解的对应的值进行处理。比如，定的注解是method级别的，那么就遍历method的注解，处理method对应的注解数据。举个栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.CLASS)</div><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> FieldAnnotation &#123;</div><div class="line">	<span class="function">String <span class="title">host</span><span class="params">()</span></span>;</div><div class="line">  </div><div class="line">  	<span class="function">String <span class="title">path</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.CLASEE)</div><div class="line"><span class="meta">@Target</span>(ElementType.METHOD)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MethodAnnotation &#123;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">version</span><span class="params">()</span> <span class="keyword">default</span> 1</span>;</div><div class="line">  	</div><div class="line">  	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> 'wynne'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义好了注解，下面看看是怎么把注解使用在代码上的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestInterface</span> </span>&#123;</div><div class="line">    <span class="meta">@FieldAnnotation</span>(host = <span class="string">"www.wynne.win"</span>,path = <span class="string">"/learn"</span>)</div><div class="line">  	<span class="keyword">public</span> String wynne;</div><div class="line">  	<span class="meta">@FieldAnnotation</span>(host = <span class="string">"www.baidu.com"</span>,path = <span class="string">"/yun"</span>)</div><div class="line">  	<span class="keyword">public</span> String baidu;</div><div class="line">  </div><div class="line">  	<span class="meta">@MethodAnnotation</span>(version = <span class="number">2</span>,value = <span class="string">"test1"</span>)</div><div class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</div><div class="line">      </div><div class="line">  	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面使用的例子写好了，直接根据定义的所属的类型的注解进行添加，比如是属性注解<strong>FIELD</strong>那么就在想要注解的属性生命前面加上注解，注解后面紧跟参数，如果参数定义的时候有<strong>default</strong>，在使用的时候可以不用给参数，除此之外要显示的给参数。方法注解是类似的。接下来就是看注解是如何生效的，注解肯定不会是自己生效，需要我们对注解加以逻辑处理，才会发挥她的作用，看下面：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    Class cls = Class.forName(TestInterface.class.getName());</div><div class="line">  	Field[] fields = cls.getDeclareFields();</div><div class="line">  	<span class="keyword">for</span> (Field field:fields)&#123;</div><div class="line">        <span class="keyword">if</span>(field == <span class="keyword">null</span>)&#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">      	FieldAnnotation fieldAnn = 				   field.getAnnotation(FieldAnnotation.class);</div><div class="line">      	<span class="keyword">if</span>(fieldAnn == <span class="keyword">null</span>)&#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">      	String url = fieldAnn.host()+fieldAnn.path();</div><div class="line">    &#125;</div><div class="line">  	<span class="keyword">for</span> (Method method:cls.getMethods())&#123;</div><div class="line">        <span class="keyword">if</span>(method != <span class="keyword">null</span>)&#123;</div><div class="line">            MethodAnnotation ann = method.getAnnotation(MethodAnnotation.class);</div><div class="line">          	<span class="keyword">if</span>(ann == <span class="keyword">null</span>)&#123;</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line">            &#125;</div><div class="line">          	String value = ann.value();</div><div class="line">          	<span class="keyword">int</span> version = ann.version();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;<span class="keyword">catch</span>(ClassNotFoundException e)&#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>好了，以上解析就是根据反射拿到有注解标注的属性或者方法，然后对拿到的field或者method的值，然后就能进行处理了。这里仅仅是一个使用的例子，项目中使用需要根据情况而定。</p>
 
       
 
@@ -275,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/20/skill/java使用注解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +297,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/20/skill/java使用注解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/12/29/skill/传值和引用传递/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          注解
+          java引用
         
       </div>
     </a>
   
   
-    <a href="/2016/12/05/skill/android序列化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android中的序列化和反序列化</div>
+    <a href="/2016/12/15/skill/加密和签名的异同/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">加密和签名</div>
       <i class="icon-circle-right"></i>
     </a>
   

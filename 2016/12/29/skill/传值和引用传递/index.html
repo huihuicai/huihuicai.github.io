@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.huihuicai.win">
-  <title>加密和签名 | 辉辉菜博客</title>
+  <title>java引用 | 辉辉菜博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+  <meta name="description" content="java中传值引用&amp;emsp;&amp;emsp;背景：今天一个刚毕业的同事，给了一个java题目：
+1234int x = 1;int y = x;x = 2;System.out.print(&quot;x:&quot;+x+&quot;,  y:&quot;+y);
+&amp;emsp;&amp;emsp;他问我是多少，我说x:2，y:1.他有些懵懂，但是还是开口了，为啥不是x:2，y:2？我一时语塞，直接说了一句：这个是基本类型，这里是传值，这个结果很">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加密和签名">
-<meta property="og:url" content="http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/index.html">
+<meta property="og:title" content="java引用">
+<meta property="og:url" content="http://www.huihuicai.win/2016/12/29/skill/传值和引用传递/index.html">
 <meta property="og:site_name" content="辉辉菜博客">
-<meta property="og:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
-<meta property="og:updated_time" content="2017-09-23T15:30:17.000Z">
+<meta property="og:description" content="java中传值引用&amp;emsp;&amp;emsp;背景：今天一个刚毕业的同事，给了一个java题目：
+1234int x = 1;int y = x;x = 2;System.out.print(&quot;x:&quot;+x+&quot;,  y:&quot;+y);
+&amp;emsp;&amp;emsp;他问我是多少，我说x:2，y:1.他有些懵懂，但是还是开口了，为啥不是x:2，y:2？我一时语塞，直接说了一句：这个是基本类型，这里是传值，这个结果很">
+<meta property="og:updated_time" content="2017-09-24T03:16:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="加密和签名">
-<meta name="twitter:description" content="RSA加密和签名不同 &amp;emsp;&amp;emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。&amp;emsp;&amp;emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家">
+<meta name="twitter:title" content="java引用">
+<meta name="twitter:description" content="java中传值引用&amp;emsp;&amp;emsp;背景：今天一个刚毕业的同事，给了一个java题目：
+1234int x = 1;int y = x;x = 2;System.out.print(&quot;x:&quot;+x+&quot;,  y:&quot;+y);
+&amp;emsp;&amp;emsp;他问我是多少，我说x:2，y:1.他有些懵懂，但是还是开口了，为啥不是x:2，y:2？我一时语塞，直接说了一句：这个是基本类型，这里是传值，这个结果很">
   
     <link rel="alternative" href="/atom.xml" title="辉辉菜博客" type="application/atom+xml">
   
@@ -152,30 +158,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-skill/加密和签名的异同" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-skill/传值和引用传递" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      加密和签名
+      java引用
     </h1>
   
 
-        <a href="/2016/12/15/skill/加密和签名的异同/" class="archive-article-date">
-  	<time datetime="2016-12-15T14:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
+        <a href="/2016/12/29/skill/传值和引用传递/" class="archive-article-date">
+  	<time datetime="2016-12-29T12:37:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="RSA加密和签名不同"><a href="#RSA加密和签名不同" class="headerlink" title="RSA加密和签名不同"></a>RSA加密和签名不同</h3><p> &emsp;&emsp;RSA不仅可以用来加解密，还可以用来签名验证。加解密是为了信息的安全，而签名验证是为了告诉通信方，这个信息是你期望的人发的，不是别人。所以加密是为了内容的安全，而签名是为了建立信任通信渠道。<br>&emsp;&emsp;RSA加解密：公钥加密，私钥解密。公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。<br>&emsp;&emsp;RSA签名验证：私钥签名，公钥验证。对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
-<a id="more"></a>
-<p><a href="http://blog.csdn.net/qq_31860607/article/details/50948015" target="_blank" rel="external">链接在这里</a>，下面是原文：<br>RSA公钥加密体制包含如下3个算法：KeyGen（密钥生成算法），Encrypt（加密算法）以及Decrypt（解密算法）。<br>  ● 密钥生成算法以安全常数<strong><em>作为输入，输出一个公钥PK，和一个私钥SK。安全常数用于确定这个加密算法的安全性有多高，一般以加密算法使用的质数p的大小有关。<br>越大，质数p一般越大，保证体制有更高的安全性。在RSA中，密钥生成算法如下：算法首先随机产生两个不同大质数p和q，计算N=pq。随后，算法计算欧拉函数</em></strong>接下来，算法随机选择一个小于<em>*</em>的整数e，并计算e关于<br>的模反元素d。最后，公钥为PK=(N, e)，私钥为SK=（N, d）。<br>  ● 加密算法以公钥PK和待加密的消息M作为输入，输出密文CT。在RSA中，加密算法如下：算法直接输出密文为<br>  ● 解密算法以私钥SK和密文CT作为输入，输出消息M。在RSA中，解密算法如下：算法直接输出明文为由于e和d在<br>下互逆，因此我们有：<br>所以，从算法描述中我们也可以看出：公钥用于对数据进行加密，私钥用于对数据进行解密。当然了，这个也可以很直观的理解：公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。</p>
-<hr>
-<p>我们再来回顾一下RSA签名体制。签名体制同样包含3个算法：KeyGen（密钥生成算法），Sign（签名算法），Verify（验证算法）。<br>  ● 。密钥生成算法同样以安全常数<br>作为输入，输出一个公钥PK和一个私钥SK。在RSA签名中，密钥生成算法与加密算法完全相同。<br>  ● 。签名算法以私钥SK和待签名的消息M作为输入，输出签名<br>。在RSA签名中，签名算法直接输出签名为<br>。注意，签名算法和RSA加密体制中的解密算法非常像。<br>  ● 。验证算法以公钥PK，签名<br>以及消息M作为输入，输出一个比特值b。b=1意味着验证通过。b=0意味着验证不通过。在RSA签名中，验证算法首先计算<br>，随后对比M’与M，如果相等，则输出b=1，否则输出b=0。注意：验证算法和RSA加密体制中的加密算法非常像。<br>所以，在签名算法中，私钥用于对数据进行签名，公钥用于对签名进行验证。这也可以直观地进行理解：对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。</p>
-<p>理解二：<br>其实公钥和私钥都可以用来加密或解密—只要能保证用A加密，就用B解密就行。至于A是公钥还是私钥，其实可以根据不同的用途而定。<br>例如说，如果你想把某个消息秘密的发给某人，那你就可以用他的公钥加密。因为只有他知道他的私钥，所以这消息也就只有他本人能解开，于是你就达到了你的目的。<br>但是如果你想发布一个公告，需要一个手段来证明这确实是你本人发的，而不是其他人冒名顶替的。那你可以在你的公告开头或者结尾附上一段用你的私钥加密的内容（例如说就是你公告正文的一段话），那所有其他人都可以用你的公钥来解密，看看解出来的内容是不是相符的。如果是的话，那就说明这公告确实是你发的—因为只有你的公钥才能解开你的私钥加密的内容，而其他人是拿不到你的私钥的。<br>最后再说一下数字签名。<br>数字签名无非就两个目的：<br>证明这消息是你发的；<br>证明这消息内容确实是完整的—也就是没有经过任何形式的篡改（包括替换、缺少、新增）。<br>其实，上面关于“公告”那段内容，已经证明了第一点：证明这消息是你发的。<br>那么要做到第二点，也很简单，就是把你公告的原文做一次哈希（md5或者sha1都行），然后用你的私钥加密这段哈希作为签名，并一起公布出去。当别人收到你的公告时，他可以用你的公钥解密你的签名，如果解密成功，并且解密出来的哈希值确实和你的公告原文一致，那么他就证明了两点：这消息确实是你发的，而且内容是完整的。</p>
+        <h3 id="java中传值引用"><a href="#java中传值引用" class="headerlink" title="java中传值引用"></a>java中传值引用</h3><p>&emsp;&emsp;<strong>背景：</strong>今天一个刚毕业的同事，给了一个java题目：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> x = <span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> y = x;</div><div class="line">x = <span class="number">2</span>;</div><div class="line">System.out.print(<span class="string">"x:"</span>+x+<span class="string">",  y:"</span>+y);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;他问我是多少，我说x:2，y:1.他有些懵懂，但是还是开口了，为啥不是x:2，y:2？我一时语塞，直接说了一句：这个是基本类型，这里是传值，这个结果很明显啊。我发现这么说，对于我这个工作了2年的人来说还好，但是别人刚参加工作的人，他或许还不太清楚为啥。果不其然他还是再次开口了：这个地方开始x，y都指向了1这个内存空间，后来这个值变成了2，那x，y不都是2吗？猛一听，我日怎么给我上升到了地址空间了，说的有模有样，但是思考他说的话，问题大大的，我给他大致讲了他的理解是错了，应该如何理解。也不知道到底是不是真的懂了。<br><a id="more"></a><br>&emsp;&emsp;下班走路上，我想了一下如何才能把这个问题给不懂的人说清楚呢？我觉得还是从下面两个方面进行：</p>
+<p>&emsp;&emsp;1.<strong>传值和传址。</strong>传值是对值类型，而传址是对引用类型（说白了就是对象）。在java中基本的数据类型都是值类型（比如int，short，float等），这些在程序中是直接保存在栈中的，程序就是靠栈中的数据运行起来的；而传址引用类型（对象）是保存在堆中的，栈中保存的是其在堆中地址空间引用，在使用的时候，首先是通过栈的地址来找到他们的。举例，假设一个person对象，要修改其name属性，这个时候是把person对象给了修改函数，这个函数去修改了这个空间地址处的某一个值。而栈中的直接就修改了变量指定的那块空间值。</p>
+<p>&emsp;&emsp;2.<strong>编译器怎么干的？</strong>就拿上面的例子来说。编译器首先要看栈中有没有这个1，如果没有就将1放进来，把x指向这个1；如果有就直接x指向1。那y也是一样的，指向x对应的那个值。好了，现在又让x=2，编译器发现栈中没有，那么把2放进栈中，然后x指向了它，此时y还是指向1的呀，没人理它，是x自己指向变了，y不受任何影响。</p>
+<p>以上就是我在大脑里面捋出来的解释，如果还是不明白或者说认为这个解释有问题，那么就需要自己去查看一下相应的书籍了。</p>
 
       
 
@@ -275,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/15/skill/加密和签名的异同/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.huihuicai.win/2016/12/29/skill/传值和引用传递/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +295,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/20/skill/java使用注解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/03/skill/webview调用本地相册/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          注解
+          webview调用本地相册
         
       </div>
     </a>
   
   
-    <a href="/2016/12/05/skill/android序列化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android中的序列化和反序列化</div>
+    <a href="/2016/12/20/skill/java使用注解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">注解</div>
       <i class="icon-circle-right"></i>
     </a>
   
